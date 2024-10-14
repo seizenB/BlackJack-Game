@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black text-white">
+    <nav class="bg-gray-900 p-4 fixed w-full z-50 top-0">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="text-white text-xl font-bold text-center">
+          BlackJack<span class="text-red-500">realm</span>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+        <div id="menu" class="hidden md:flex space-x-6 text-white mx-auto">
+          <a href="#" class="block hover:text-gray-200">Home</a>
+          <a href="#" class="block hover:text-gray-200">How To Play</a>
+          <a href="#" class="block hover:text-gray-200">About</a>
+          <a href="#" class="block hover:text-gray-200">Contact</a>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="bg-gray-700 fixed right-0 w-64 h-full p-4 text-white space-y-2 transform translate-x-full transition-transform duration-500 md:hidden z-50 space-y-8"
+      >
+        <a href="#" class="block hover:text-gray-200">Home</a>
+        <a href="#" class="block hover:text-gray-200">How To Play</a>
+        <a href="#" class="block hover:text-gray-200">About</a>
+        <a href="#" class="block hover:text-gray-200">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main text-center content-center py-16 px-4 h-screen">
+      <h1 class="text-4xl font-bold text-red-500 mb-6 drop-shadow-lg">
+        Blackjack Game
+      </h1>
+      <p class="text-xl max-w-2xl mx-auto mb-12 drop-shadow-2xl">
+        Experience the thrill of blackjack with our easy-to-use online platform.
+        Challenge the dealer, make strategic choices, and aim for that winning
+        hand of 21.
+      </p>
+      <button
+        class="bg-red-500 px-6 py-3 rounded hover:bg-red-600 text-xl font-semibold drop-shadow-lg"
+        id="play-btn"
+      >
+        Start Playing
+      </button>
+    </main>
+
+    <!-- How To Play Section -->
+    <section id="how-to-play" class="py-16 px-4 bg-gray-800 text-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">How to Play Blackjack</h2>
+        <ol
+          class="list-decimal list-inside text-lg max-w-2xl mx-auto text-left"
+        >
+          <li>Start by placing your bet before the cards are dealt.</li>
+          <li>
+            Both you and the dealer will receive two cards. Your goal is to get
+            as close to 21 as possible without going over.
+          </li>
+          <li>
+            Number cards are worth their value, face cards are worth 10, and an
+            Ace can be worth 1 or 11.
+          </li>
+          <li>
+            Choose whether to "Hit" (draw another card) or "Stand" (keep your
+            current hand).
+          </li>
+          <li>The dealer must draw cards until they reach at least 17.</li>
+          <li>
+            If your total is closer to 21 than the dealer’s without exceeding
+            21, you win!
+          </li>
+        </ol>
+        <p class="mt-6 text-lg">
+          Blackjack is a game of strategy, luck, and knowing when to stop. Give
+          it a try and see if you can beat the dealer!
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-700 text-white">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">About Blackjack Realm</h2>
+        <p class="text-lg max-w-3xl mx-auto mb-6">
+          Blackjack Realm is your go-to destination for the classic casino card
+          game that has captured the hearts of millions. Our mission is to bring
+          the excitement of Blackjack to everyone, no matter where you are.
+          Play, have fun, and try your luck with an experience that replicates
+          the thrill of a real casino.
+        </p>
+        <p class="text-lg max-w-3xl mx-auto">
+          Whether you’re a seasoned player or a beginner, we offer an easy and
+          entertaining way to enjoy Blackjack. Join us and experience the
+          perfect blend of strategy, risk, and excitement—all from the comfort
+          of your device.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-6 bg-gray-900 text-center">
+      <p>&copy; 2024 blackjackRealm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

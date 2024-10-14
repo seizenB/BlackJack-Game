@@ -1,0 +1,39 @@
+body {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.main {
+  background-image: url("dark_theme_blackjack_background.png");
+  background-size: cover; /* Agar gambar memenuhi area elemen */
+  background-position: center; /* Agar gambar berada di tengah */
+  margin-top: 59px;
+}
+
+#mobile-menu {
+  margin-top: 16px;
+}
+
+.play-body {
+  background-image: url("play-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.chip {
+  width: 200px;
+  height: 200px;
+}
+
+.chip-btn {
+  width: 500px;
+  height: 200px;
+}
+
+@media (max-width: 640px) {
+  .chip {
+    width: 100px;
+    height: 100px;
+  }
+}

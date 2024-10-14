@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Over Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 flex items-center justify-center h-screen">
+    <div id="gameContainer" class="text-center text-white">
+      <h1 class="text-4xl mb-4">Game Simulasi</h1>
+      <p>Uang kamu saat ini: <span id="uangDisplay">100</span></p>
+      <button
+        onclick="kurangiUang()"
+        class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4"
+      >
+        Kurangi Uang
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="gameOverModal"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+        <h2 class="text-2xl font-bold text-red-600 mb-4">Game Over</h2>
+        <p class="text-gray-700 mb-6">Uang kamu habis! Silakan coba lagi.</p>
+        <button
+          onclick="mainLagi()"
+          class="bg-red-500 text-white px-4 py-2 rounded-md"
+        >
+          Main Lagi
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Simulasi variabel uang
+      let uang = 100;
+
+      // Fungsi untuk memperbarui tampilan uang
+      function updateUangDisplay() {
+        document.getElementById("uangDisplay").innerText = uang;
+      }
+
+      // Fungsi untuk memeriksa kondisi uang
+      function cekUang() {
+        if (uang <= 0) {
+          openModal(); // Jika uang <= 0, modal akan muncul
+        }
+      }
+
+      // Fungsi untuk mengurangi uang
+      function kurangiUang() {
+        uang -= 25; // Contoh pengurangan uang
+        updateUangDisplay(); // Update tampilan uang
+        cekUang(); // Cek apakah uang sudah habis
+      }
+
+      // Fungsi untuk membuka modal
+      function openModal() {
+        document.getElementById("gameOverModal").classList.remove("hidden");
+      }
+
+      // Fungsi untuk menutup modal dan mulai ulang
+      function mainLagi() {
+        uang = 100; // Reset uang
+        updateUangDisplay(); // Update tampilan uang
+        document.getElementById("gameOverModal").classList.add("hidden"); // Tutup modal
+      }
+    </script>
+  </body>
+</html>
